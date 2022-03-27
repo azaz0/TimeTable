@@ -13,7 +13,7 @@ class Passenger:
     relief = None
 
     def __init__(self, relief: int):
-        self.set_relief(self, relief)
+        self.set_relief(relief)
 
     def get_relief(self):
         return self.relief

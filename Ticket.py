@@ -1,8 +1,12 @@
-class Ticket:
-    ticketPrice=9.99
+import Passenger
 
-    def __init__(self, Passenger):
-        self.ticketPrice=self.ticketPrice-(self.ticketPrice*(Passenger.get_relief()/100))
+
+class Ticket(Passenger.Passenger):
+    ticketPrice = 9.99
+
+    def __init__(self, relief: int):
+        super().__init__(relief)
+        self.ticketPrice = self.ticketPrice - (self.ticketPrice * (relief / 100))
 
     def get_ticketPrice(self):
         return self.ticketPrice

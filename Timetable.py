@@ -4,6 +4,7 @@ import datetime as DT
 class Timetable:
     departures = []
 
+    #departure: object || departure: list of objects
     def __init__(self, departure):
         self.departures.extend(departure)
 
@@ -19,14 +20,14 @@ class Timetable:
         print("Departure no. ", index)
         print(self.departures[index])
 
-    def add_departure(self, departure: object):
-        self.departures = self.departures.append(departure)
+    def add_departure(self, Departure: object):
+        self.departures = self.departures.append(Departure)
 
     def add_departures(self, departures):
         self.departures = self.departures.extend(departures)
 
-    def remove_departure(self, departure: object):
-        self.departures.remove(departure)
+    def remove_departure(self, Departure: object):
+        self.departures.remove(Departure)
 
     def convertTimeToMinutes(self, time):
         t1 = DT.datetime.strptime(time, '%H:%M')
